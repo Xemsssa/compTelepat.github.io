@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript</title>
+
+</head>
+<body>
+
+<p>Guess the number?</p>
+
+<input id="number" type="text">
+<button id="guess">Guess</button>
+
+	<script type="text/javascript">
+
+		function guessNumber(x) {
+
+			var i = 0;
+			var comp = 0;
+
+			while (comp != x) {
+				var comp = Math.floor((Math.random() * 5)+ 1);	
+				i++;
+			}
+
+			return (i);
+	
+		}
+
+		document.getElementById('guess').onclick = function () {
+			
+			var number = document.getElementById('number').value;
+			
+			alert(guessNumber(number));
+		}
+
+	</script>
+
+</body>
+</html>
